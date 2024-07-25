@@ -1,6 +1,6 @@
 <br clear="both">
 
-<h3 align="center">I am Kunal</h3>
+<h3 align="center">Hi there,I am Kunal</h3>
 
 ###
 
@@ -39,9 +39,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="mysql logo"  />
 </div>
 
-###
 
-<img src="https://raw.githubusercontent.com/kunal763/kunal763/output/snake.svg" alt="Snake animation" />
 
 ###
 
