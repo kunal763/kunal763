@@ -28,7 +28,7 @@ function initTheme() {
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      showToast(`Switched to ${newTheme} theme 🌓`);
+      showToast(`Switched to ${newTheme} theme`);
     });
   }
 }
@@ -153,7 +153,7 @@ function initTerminal() {
     <span class="json-string">"Low-Latency C++ Profiling (gprof, Benchmark)"</span>,
     <span class="json-string">"Cloud Infrastructure & Secrets Management"</span>
   ],
-  <span class="json-key">"status"</span>: <span class="json-string">"🚀 Ready to deploy impactful code"</span>
+  <span class="json-key">"status"</span>: <span class="json-string">"Available for high-impact backend &amp; systems engineering"</span>
 }</code></pre>`,
 
     'kunal --skills': `<pre class="json-code"><code>[
@@ -164,7 +164,7 @@ function initTerminal() {
 ]</code></pre>`,
 
     'kunal --benchmarks': `<pre class="json-code"><code>{
-  <span class="json-key">"telemetry_latency"</span>: <span class="json-string">"12µs ➔ 4µs (66% speedup in C++ hot path)"</span>,
+  <span class="json-key">"telemetry_latency"</span>: <span class="json-string">"12µs -> 4µs (66% speedup in C++ hot path)"</span>,
   <span class="json-key">"wire_payload_reduction"</span>: <span class="json-string">"49% payload shrink via YANG-Protobuf models"</span>,
   <span class="json-key">"concurrency_stress_test"</span>: <span class="json-string">"568 req/s under 10,000 simulated users"</span>,
   <span class="json-key">"db_read_reduction"</span>: <span class="json-string">"45% database read load reduction with Redis"</span>,
@@ -245,7 +245,7 @@ function closeResumeModal() {
 const projectData = {
   'cab-sharing': {
     title: 'Scalable Cab Sharing Backend (smart-ride-sharing)',
-    icon: '🚖',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>`,
     content: `
       <div class="modal-deep-dive-section">
         <h4 class="modal-section-title">System Overview</h4>
@@ -273,7 +273,7 @@ const projectData = {
   },
   'schedule-fa': {
     title: 'Schedule FA Creator — ITR Foreign Asset Automation',
-    icon: '📊',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>`,
     content: `
       <div class="modal-deep-dive-section">
         <h4 class="modal-section-title">Project Overview</h4>
@@ -303,7 +303,7 @@ const projectData = {
   },
   'http-server': {
     title: 'High-Performance HTTP Server with Gzip Compression',
-    icon: '⚡',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>`,
     content: `
       <div class="modal-deep-dive-section">
         <h4 class="modal-section-title">Project Overview</h4>
@@ -344,7 +344,7 @@ function showProjectDetails(projectId, event) {
   const body = document.getElementById('project-modal-body');
 
   if (title) title.textContent = data.title;
-  if (icon) icon.textContent = data.icon;
+  if (icon) icon.innerHTML = data.icon;
   if (body) body.innerHTML = data.content;
 
   if (modal) {
@@ -382,7 +382,7 @@ window.addEventListener('keydown', (e) => {
    -------------------------------------------------------------------------- */
 function copyToClipboard(text, buttonElement) {
   navigator.clipboard.writeText(text).then(() => {
-    showToast(`Copied "${text}" to clipboard! 📋`);
+    showToast(`Copied "${text}" to clipboard!`);
     if (buttonElement) {
       const originalHTML = buttonElement.innerHTML;
       buttonElement.innerHTML = `
@@ -416,7 +416,7 @@ function handleContactSubmit(event) {
   // Launch email client
   window.location.href = mailtoUrl;
 
-  showToast('Opening your email client... 🚀');
+  showToast('Opening your email client...');
   document.getElementById('portfolio-contact-form').reset();
 }
 
@@ -430,7 +430,9 @@ function showToast(message) {
   const toast = document.createElement('div');
   toast.className = 'toast';
   toast.innerHTML = `
-    <span class="toast-icon">✨</span>
+    <span class="toast-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </span>
     <span class="toast-message">${message}</span>
   `;
 

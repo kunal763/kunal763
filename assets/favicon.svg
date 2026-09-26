@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1f26"/>
+      <stop offset="100%" stop-color="#0c0d10"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Tile with Hairline Border -->
+  <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+  <rect width="62" height="62" x="1" y="1" rx="14" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+  <!-- Stylized Geometric 'K' Monogram -->
+  <path d="M21 16v32 M21 32l18-16 M27 26.5l15 21.5" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Live Signal / Terminal Node -->
+  <circle cx="43" cy="18" r="3" fill="#ffffff"/>
+</svg>
