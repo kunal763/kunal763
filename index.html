@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Kunal Singh | Software Developer L2 &amp; Systems Architect</title>
+  <meta name="description" content="Portfolio of Kunal Singh — Software Developer L2 specializing in high-throughput backend services, C++ systems, Python (FastAPI), distributed caching, and cloud infrastructure.">
+  <meta name="keywords" content="Kunal Singh, Software Engineer, Backend Developer, FastAPI, C++, Python, Spring Boot, PostGIS, Distributed Systems, Pune">
+  <meta name="author" content="Kunal Singh">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Kunal Singh | Software Developer &amp; Systems Architect">
+  <meta property="og:description" content="Engineering high-throughput backend services, low-latency C++ systems, and automated financial/data tooling.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/kunal.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" id="nav-brand-logo">
+        <div class="brand-badge-icon">⚡</div>
+        <div class="brand-text-group">
+          <span class="brand-title">Kunal</span><span class="brand-accent">.dev</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about" class="nav-link" id="nav-link-about">About</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-link-skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-link-projects">Portfolio</a></li>
+        <li><a href="#experience" class="nav-link" id="nav-link-experience">Experience</a></li>
+        <li><a href="#achievements" class="nav-link" id="nav-link-achievements">Achievements</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-link-contact">Contact</a></li>
+      </ul>
+
+      <!-- Action buttons & Theme Toggle -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#resume-modal" class="btn btn-outline-round btn-sm" id="nav-resume-btn" onclick="openResumeModal(event)">
+          <span>Download CV</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Portfolio</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-resume-item">
+          <a href="#resume-modal" class="btn btn-primary btn-block" onclick="openResumeModal(event)">Download CV</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section (Editorial Minimalist Design inspired by reference) -->
+    <section class="hero-section" id="hero">
+      
+      <!-- Left Vertical Edge Rail -->
+      <aside class="hero-left-rail" aria-hidden="true">
+        <span class="rail-text-top">Systems &amp; Backend Engineer</span>
+        <span class="rail-line"></span>
+        <span class="rail-text-bottom">2026</span>
+      </aside>
+
+      <div class="container hero-container">
+        
+        <!-- Hero Left Column: Stats + Giant Hello + Description + Actions -->
+        <div class="hero-content">
+          
+          <!-- Top Highlights / Mini Stats (Directly above Hello, matching reference) -->
+          <div class="hero-top-stats">
+            <div class="mini-stat-item">
+              <div class="mini-stat-num">+<span class="counter" data-target="2">2</span> Yrs</div>
+              <div class="mini-stat-label">Production Exp</div>
+            </div>
+            <div class="mini-stat-item">
+              <div class="mini-stat-num">+<span class="counter" data-target="568">568</span></div>
+              <div class="mini-stat-label">Req/s Throughput</div>
+            </div>
+            <div class="mini-stat-item">
+              <div class="mini-stat-num"><span class="counter" data-target="4">4</span>µs</div>
+              <div class="mini-stat-label">Hot-Path Latency</div>
+            </div>
+            <div class="mini-stat-item">
+              <div class="mini-stat-num">9.0<span class="mini-stat-sub">/10</span></div>
+              <div class="mini-stat-label">CGPA (AIT Pune)</div>
+            </div>
+          </div>
+
+          <!-- Giant Editorial Headline -->
+          <div class="hero-headline-wrap">
+            <h1 class="hero-giant-title">Hello</h1>
+            <p class="hero-identity-sub">— It's Kunal, a Systems &amp; Backend Engineer</p>
+          </div>
+
+          <!-- Lead Paragraph -->
+          <p class="hero-lead">
+            Software Developer L2 and Systems Engineer based in Pune. I design high-concurrency distributed backends, microsecond-level C++ network profiling, and automated financial data platforms using <strong>Python (FastAPI, Django)</strong>, <strong>C++17</strong>, <strong>Java (Spring Boot)</strong>, and <strong>AWS Cloud Infrastructure</strong>.
+          </p>
+
+          <!-- Action Buttons & Profiles -->
+          <div class="hero-btn-group">
+            <a href="#contact" class="btn btn-dark-pill" id="hero-btn-contact">
+              <span>Contact Me</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#projects" class="btn-link-minimal" id="hero-btn-portfolio">
+              <span>Selected Works</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Profile Links -->
+          <div class="hero-social-chips">
+            <span class="chips-label">Profiles:</span>
+            <a href="https://codeforces.com/profile/KunalSinghChauhan" target="_blank" rel="noopener noreferrer" class="cp-chip" title="Codeforces Profile (KunalSinghChauhan)">
+              <span class="dot-indicator dot-cf"></span>
+              <span>Codeforces: <strong>KunalSinghChauhan</strong></span>
+            </a>
+            <a href="https://github.com/kunal763" target="_blank" rel="noopener noreferrer" class="cp-chip" title="GitHub (@kunal763)">
+              <span class="dot-indicator dot-gh"></span>
+              <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/kunal-singh-chauhan" target="_blank" rel="noopener noreferrer" class="cp-chip" title="LinkedIn Profile">
+              <span class="dot-indicator dot-li"></span>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <!-- Scroll Down Indicator (Matching Reference) -->
+          <div class="hero-scroll-cue">
+            <a href="#skills" class="scroll-down-link">
+              <span>Scroll down</span>
+              <svg class="scroll-arrow-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Right Column: High-Fashion Monochromatic Portrait -->
+        <div class="hero-portrait-stage">
+          <div class="portrait-editorial-frame">
+            <div class="portrait-img-wrapper">
+              <img src="./assets/kunal.jpg" alt="Kunal Singh - Systems & Backend Engineer" class="portrait-editorial-img" id="hero-portrait-photo" loading="eager">
+              <div class="portrait-fade-overlay"></div>
+            </div>
+            
+            <!-- Minimalist Tech Overlay Tag -->
+            <div class="editorial-badge-pill">
+              <span class="badge-dot-live"></span>
+              <span class="badge-role">L2 Software Developer</span>
+              <span class="badge-loc">Pune, IN</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why Choose Me & Core Capabilities Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        
+        <div class="why-hire-grid">
+          <!-- Left Column -->
+          <div class="why-hire-text">
+            <div class="pill-badge">My Skills</div>
+            <h2 class="section-big-title">
+              Why Choose Me For Your <span class="highlight-green">Backend &amp; Systems</span> Needs?
+            </h2>
+            <p class="section-lead-text">
+              I specialize in writing high-performance, maintainable code where latency and scale matter. From architecting geospatial ride-matching engines to microsecond-level C++ network profiling and privacy-first local financial tooling, I deliver reliable systems with measurable benchmarks.
+            </p>
+            <a href="#contact" class="btn btn-dark-pill">
+              <span>Get In Touch</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Right Column: 4 Capability Cards -->
+          <div class="capability-cards-grid">
+            <div class="cap-card">
+              <div class="cap-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <h3 class="cap-title">Low-Latency C++</h3>
+              <p class="cap-desc">POSIX sockets, multithreading, zlib compression, YANG-protobuf telemetry, and memory profiling (gprof, Google Benchmark).</p>
+            </div>
+
+            <div class="cap-card">
+              <div class="cap-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <h3 class="cap-title">Distributed Backends</h3>
+              <p class="cap-desc">FastAPI, Django, Spring Boot, PostgreSQL, PostGIS spatial queries, and high-concurrency Redis caching (568 req/s).</p>
+            </div>
+
+            <div class="cap-card">
+              <div class="cap-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="cap-title">Financial &amp; Data Tooling</h3>
+              <p class="cap-desc">Schedule FA tax automation, multi-broker statement parsing (Schwab/Vested), SBI TTBR forex calculation, and Pandas.</p>
+            </div>
+
+            <div class="cap-card">
+              <div class="cap-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+              </div>
+              <h3 class="cap-title">Cloud &amp; DevOps</h3>
+              <p class="cap-desc">AWS EC2, AWS Secrets Manager, CloudFront, Nginx reverse proxy, OAuth2-Proxy, PM2 process daemons, and Docker.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filterable Skill Matrix (Deep dive pills) -->
+        <div class="skill-tabs-wrap">
+          <div class="skills-filter-nav" role="tablist">
+            <button class="filter-tab-btn active" data-filter="all" role="tab">All Capabilities</button>
+            <button class="filter-tab-btn" data-filter="backend" role="tab">Backend &amp; Systems</button>
+            <button class="filter-tab-btn" data-filter="languages" role="tab">Languages</button>
+            <button class="filter-tab-btn" data-filter="databases" role="tab">Databases &amp; Caching</button>
+            <button class="filter-tab-btn" data-filter="devops" role="tab">Cloud &amp; DevOps</button>
+          </div>
+
+          <div class="skills-cards-grid" id="skills-grid">
+            <!-- Category 1: Languages -->
+            <div class="skill-category-card" data-category="languages">
+              <div class="skill-card-top">
+                <span class="skill-card-icon">💻</span>
+                <h3 class="skill-card-title">Programming Languages</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="pill-name">Python</span><span class="pill-level">Advanced</span></div>
+                <div class="skill-pill"><span class="pill-name">C++ (C++17/20)</span><span class="pill-level">Advanced</span></div>
+                <div class="skill-pill"><span class="pill-name">Java</span><span class="pill-level">Proficient</span></div>
+                <div class="skill-pill"><span class="pill-name">C</span><span class="pill-level">Proficient</span></div>
+                <div class="skill-pill"><span class="pill-name">JavaScript</span><span class="pill-level">Proficient</span></div>
+                <div class="skill-pill"><span class="pill-name">Kotlin</span><span class="pill-level">Intermediate</span></div>
+              </div>
+            </div>
+
+            <!-- Category 2: Backend & Systems -->
+            <div class="skill-category-card" data-category="backend">
+              <div class="skill-card-top">
+                <span class="skill-card-icon">⚙️</span>
+                <h3 class="skill-card-title">Backend &amp; Low Latency</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="pill-name">FastAPI</span><span class="pill-level">Production</span></div>
+                <div class="skill-pill"><span class="pill-name">Django</span><span class="pill-level">Production</span></div>
+                <div class="skill-pill"><span class="pill-name">Spring Boot</span><span class="pill-level">Production</span></div>
+                <div class="skill-pill"><span class="pill-name">POSIX Sockets</span><span class="pill-level">Core</span></div>
+                <div class="skill-pill"><span class="pill-name">Multithreading</span><span class="pill-level">Core</span></div>
+                <div class="skill-pill"><span class="pill-name">gprof &amp; Google Benchmark</span><span class="pill-level">Profiling</span></div>
+              </div>
+            </div>
+
+            <!-- Category 3: Databases & Caching -->
+            <div class="skill-category-card" data-category="databases">
+              <div class="skill-card-top">
+                <span class="skill-card-icon">🗄️</span>
+                <h3 class="skill-card-title">Databases &amp; Spatial Stores</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="pill-name">PostgreSQL</span><span class="pill-level">Advanced</span></div>
+                <div class="skill-pill"><span class="pill-name">PostGIS (Spatial)</span><span class="pill-level">Geospatial</span></div>
+                <div class="skill-pill"><span class="pill-name">Redis (In-Memory)</span><span class="pill-level">Caching</span></div>
+                <div class="skill-pill"><span class="pill-name">MySQL</span><span class="pill-level">Indexed</span></div>
+                <div class="skill-pill"><span class="pill-name">SQLite</span><span class="pill-level">Embedded</span></div>
+              </div>
+            </div>
+
+            <!-- Category 4: Cloud & DevOps -->
+            <div class="skill-category-card" data-category="devops">
+              <div class="skill-card-top">
+                <span class="skill-card-icon">☁️</span>
+                <h3 class="skill-card-title">Cloud Infrastructure</h3>
+              </div>
+              <div class="skill-pills-list">
+                <div class="skill-pill"><span class="pill-name">AWS EC2</span><span class="pill-level">Compute</span></div>
+                <div class="skill-pill"><span class="pill-name">AWS Secrets Manager</span><span class="pill-level">Security</span></div>
+                <div class="skill-pill"><span class="pill-name">Nginx &amp; OAuth2-Proxy</span><span class="pill-level">Proxy</span></div>
+                <div class="skill-pill"><span class="pill-name">PM2 &amp; Supervisorctl</span><span class="pill-level">Daemons</span></div>
+                <div class="skill-pill"><span class="pill-name">Docker &amp; CI/CD</span><span class="pill-level">Containers</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        
+        <div class="section-center-head">
+          <div class="pill-badge">Portfolio</div>
+          <h2 class="section-big-title">
+            My Featured <span class="highlight-green">Open Source</span> Projects
+          </h2>
+          <p class="section-lead-text text-center">
+            Handcrafted real-world systems spanning high-concurrency ride allocation, tax computation automation, and micro-optimized C++ servers.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: Smart Ride Sharing Backend -->
+          <article class="project-showcase-card">
+            <div class="proj-card-top">
+              <div class="proj-icon-sq">🚖</div>
+              <a href="https://github.com/kunal763/smart-ride-sharing" target="_blank" rel="noopener noreferrer" class="proj-github-btn" title="View Source on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+
+            <h3 class="proj-name">Scalable Cab Sharing Backend</h3>
+            
+            <p class="proj-summary">
+              High-concurrency distributed ride matching service engineered to manage dense rider-driver allocations with sub-second response times and stress-tested throughput.
+            </p>
+
+            <ul class="proj-bullets">
+              <li><strong>568 Requests/Sec:</strong> Sustained throughput under 10,000 simulated concurrent users.</li>
+              <li><strong>45% DB Read Cut:</strong> Low-latency Redis caching layer for hot ride state lookups.</li>
+              <li><strong>PostGIS Spatial Queries:</strong> Efficient geometric radius proximity matching.</li>
+            </ul>
+
+            <div class="proj-tag-list">
+              <span class="tag">FastAPI</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">PostGIS</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Docker</span>
+            </div>
+
+            <div class="proj-card-foot">
+              <a href="https://github.com/kunal763/smart-ride-sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-round">GitHub ↗</a>
+              <button class="btn btn-sm btn-ghost-round" onclick="showProjectDetails('cab-sharing', event)">Details</button>
+            </div>
+          </article>
+
+          <!-- Project 2: Schedule FA Creator -->
+          <article class="project-showcase-card">
+            <div class="proj-card-top">
+              <div class="proj-icon-sq">📊</div>
+              <a href="https://github.com/kunal763/Schedule-fa" target="_blank" rel="noopener noreferrer" class="proj-github-btn" title="View Source on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+
+            <h3 class="proj-name">Schedule FA Creator</h3>
+            
+            <p class="proj-summary">
+              A 100% local, privacy-first tax automation engine that parses foreign broker statements (Schwab, INDmoney, Vested) and generates ITR-2 Schedule FA (Table A3) sheets using official SBI TTBR forex rates.
+            </p>
+
+            <ul class="proj-bullets">
+              <li><strong>Pluggable Factory Parsers:</strong> Schwab (RSU/ESPP/Dividends), INDmoney, Vested, Generic CSV.</li>
+              <li><strong>Rule 115 Forex Engine:</strong> Auto SBI TTBR lookup with preceding working day fallback.</li>
+              <li><strong>Dual Web &amp; CLI Interface:</strong> Local FastAPI dashboard + CLI with 1-to-1 Excel export.</li>
+            </ul>
+
+            <div class="proj-tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">OpenPyXL</span>
+              <span class="tag">yfinance</span>
+            </div>
+
+            <div class="proj-card-foot">
+              <a href="https://github.com/kunal763/Schedule-fa" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-round">GitHub ↗</a>
+              <button class="btn btn-sm btn-ghost-round" onclick="showProjectDetails('schedule-fa', event)">Details</button>
+            </div>
+          </article>
+
+          <!-- Project 3: SimpleHttpServer (C++) -->
+          <article class="project-showcase-card">
+            <div class="proj-card-top">
+              <div class="proj-icon-sq">⚡</div>
+              <a href="https://github.com/kunal763/SimpleHttpServer" target="_blank" rel="noopener noreferrer" class="proj-github-btn" title="View Source on GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+            </div>
+
+            <h3 class="proj-name">HTTP Server with Gzip Compression</h3>
+            
+            <p class="proj-summary">
+              A lightweight, high-performance HTTP server engineered from scratch in C++17 supporting concurrent connections, POSIX sockets, and real-time zlib gzip payload compression.
+            </p>
+
+            <ul class="proj-bullets">
+              <li><strong>Concurrent Multithreading:</strong> Handles multiple simultaneous connections via POSIX threads.</li>
+              <li><strong>Gzip Compression Engine:</strong> Dynamic body compression and hexadecimal encoding conversion.</li>
+              <li><strong>POSIX File Serving:</strong> Native directory routing (<code>--directory</code>) with zero external server dependencies.</li>
+            </ul>
+
+            <div class="proj-tag-list">
+              <span class="tag">C++17</span>
+              <span class="tag">POSIX Sockets</span>
+              <span class="tag">Multithreading</span>
+              <span class="tag">zlib / Gzip</span>
+              <span class="tag">CMake</span>
+            </div>
+
+            <div class="proj-card-foot">
+              <a href="https://github.com/kunal763/SimpleHttpServer" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-round">GitHub ↗</a>
+              <button class="btn btn-sm btn-ghost-round" onclick="showProjectDetails('http-server', event)">Details</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Timeline -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-center-head">
+          <div class="pill-badge">Career Journey</div>
+          <h2 class="section-big-title">
+            Work Experience in <span class="highlight-green">Production</span>
+          </h2>
+          <p class="section-lead-text text-center">Demonstrated track record of delivering resilient, high-impact systems in fast-paced teams.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1: Humming Bird Web Solutions -->
+          <div class="timeline-card">
+            <div class="timeline-marker">
+              <div class="timeline-dot current"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content modern-card">
+              <div class="timeline-header">
+                <div class="timeline-company-info">
+                  <h3 class="timeline-role">Software Developer L2</h3>
+                  <div class="timeline-company">
+                    <span class="company-name">Humming Bird Web Solutions</span>
+                    <span class="company-location">📍 Pune, India</span>
+                  </div>
+                </div>
+                <div class="timeline-badge-date current-badge">
+                  <span>April 2026 – Present</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <ul class="experience-bullets">
+                  <li>
+                    <strong>AI Agent Platform &amp; RAG Ingestion:</strong> Developed a scalable AI agent platform for website-specific chatbots using web scraping and RAG pipelines with HTTPX, Selenium, FastAPI, and vector embeddings, successfully ingesting content from <strong>35,000+ webpages across 10 chatbot deployments</strong>.
+                  </li>
+                  <li>
+                    <strong>Granular RBAC &amp; SSO:</strong> Implemented JWT-based Role-Based Access Control and Google OAuth authentication in FastAPI, establishing secure, multi-tenant Admin, Tester, and User access tiers.
+                  </li>
+                  <li>
+                    <strong>Centralized Configuration Manager:</strong> Designed and deployed an automated Secrets Manager config service on AWS, replacing fragile environment files and automating credential rotation across 10 distinct deployments.
+                  </li>
+                  <li>
+                    <strong>Production Platform Infrastructure:</strong> Deployed and maintained the internal platform on AWS EC2 using PM2 and Supervisorctl for resilient process management, with CloudFront caching and Nginx + OAuth2-Proxy for header-based verification.
+                  </li>
+                  <li>
+                    <strong>GitLab EE Source Extension:</strong> Engineered a custom worklogs feature directly into self-hosted GitLab EE displaying interactive issue status boards, inline time logging, story points, and priority management.
+                  </li>
+                </ul>
+
+                <div class="timeline-tech-tags">
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">RAG Pipelines</span>
+                  <span class="tech-tag">Vector Embeddings</span>
+                  <span class="tech-tag">AWS Secrets Manager</span>
+                  <span class="tech-tag">AWS EC2</span>
+                  <span class="tech-tag">OAuth2-Proxy</span>
+                  <span class="tech-tag">PM2</span>
+                  <span class="tech-tag">GitLab EE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Tarana Wireless -->
+          <div class="timeline-card">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content modern-card">
+              <div class="timeline-header">
+                <div class="timeline-company-info">
+                  <h3 class="timeline-role">C/C++ Developer</h3>
+                  <div class="timeline-company">
+                    <span class="company-name">Tarana Wireless</span>
+                    <span class="company-location">📍 Pune, India</span>
+                  </div>
+                </div>
+                <div class="timeline-badge-date">
+                  <span>June 2025 – February 2026</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <ul class="experience-bullets">
+                  <li>
+                    <strong>gNMI Telemetry Pipeline Migration:</strong> Migrated production network telemetry pipeline to YANG-based protobuf models, <strong>reducing payload size by 49%</strong> and eliminating runtime path validation errors via compile-time schema enforcement.
+                  </li>
+                  <li>
+                    <strong>Microsecond Latency Optimization:</strong> Reduced execution time in latency-critical telemetry hot-paths from <strong>12µs down to 4µs (66% speedup)</strong> by eliminating redundant vector copies and tuning custom memory allocators.
+                  </li>
+                  <li>
+                    <strong>CPU Profiling &amp; Throughput:</strong> Profiled critical bottlenecks using <code>gprof</code> and Google Benchmark, resolving heap allocation locks to significantly elevate telemetry message throughput.
+                  </li>
+                  <li>
+                    <strong>RN Emulation Framework:</strong> Engineered a software emulation framework replicating production hardware behavior, reducing lab hardware dependency and accelerating troubleshooting cycles by <strong>35%</strong>.
+                  </li>
+                </ul>
+
+                <div class="timeline-tech-tags">
+                  <span class="tech-tag">C++17</span>
+                  <span class="tech-tag">gNMI</span>
+                  <span class="tech-tag">Protobuf</span>
+                  <span class="tech-tag">YANG Models</span>
+                  <span class="tech-tag">gprof</span>
+                  <span class="tech-tag">Google Benchmark</span>
+                  <span class="tech-tag">Systems Profiling</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: ZF Group -->
+          <div class="timeline-card">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content modern-card">
+              <div class="timeline-header">
+                <div class="timeline-company-info">
+                  <h3 class="timeline-role">Software Developer Intern</h3>
+                  <div class="timeline-company">
+                    <span class="company-name">ZF Group</span>
+                    <span class="company-location">📍 Pune, India</span>
+                  </div>
+                </div>
+                <div class="timeline-badge-date">
+                  <span>March 2025 – May 2025</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <ul class="experience-bullets">
+                  <li>
+                    <strong>Spring Boot Microservices:</strong> Engineered 12+ enterprise REST API endpoints using Java Spring Boot and MySQL powering BOM-based risk intelligence dashboards.
+                  </li>
+                  <li>
+                    <strong>SQL Optimization:</strong> Lowered database query latency by <strong>25%</strong> through composite indexing strategies and rewritten complex multi-table SQL joins.
+                  </li>
+                </ul>
+
+                <div class="timeline-tech-tags">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">REST APIs</span>
+                  <span class="tech-tag">Query Optimization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Sphyzee -->
+          <div class="timeline-card">
+            <div class="timeline-marker">
+              <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-content modern-card">
+              <div class="timeline-header">
+                <div class="timeline-company-info">
+                  <h3 class="timeline-role">Software Developer Intern</h3>
+                  <div class="timeline-company">
+                    <span class="company-name">Sphyzee</span>
+                    <span class="company-location">🌐 Remote</span>
+                  </div>
+                </div>
+                <div class="timeline-badge-date">
+                  <span>December 2024 – February 2025</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <ul class="experience-bullets">
+                  <li>
+                    <strong>Automation Pipelines:</strong> Decreased manual dashboard setup time by <strong>40%</strong> by engineering automated JSON-driven data ingestion pipelines.
+                  </li>
+                  <li>
+                    <strong>Migration Velocity:</strong> Shortened dashboard migration turnaround time by <strong>30%</strong> via custom automation scripts.
+                  </li>
+                </ul>
+
+                <div class="timeline-tech-tags">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Automation</span>
+                  <span class="tech-tag">JSON Pipelines</span>
+                  <span class="tech-tag">Data Engineering</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements & Recognition Section -->
+    <section class="section achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-center-head">
+          <div class="pill-badge">Recognition</div>
+          <h2 class="section-big-title">
+            Honors &amp; <span class="highlight-green">Competitive Track Record</span>
+          </h2>
+          <p class="section-lead-text text-center">Proven algorithmic problem solving under pressure and academic excellence.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Achievement 1 -->
+          <div class="award-card modern-card">
+            <div class="award-icon-box">🏆</div>
+            <div class="award-body">
+              <div class="award-head">
+                <h3 class="award-name">ICPC Asia-West Regional 2023</h3>
+                <span class="badge-tag tag-rank">Rank 1 in College</span>
+              </div>
+              <p class="award-para">
+                Ranked <strong>1st in college</strong>, competing against <strong>14,000+ top collegiate algorithmic programmers</strong> across the Asia-West region in rigorous algorithmic problem solving and time-constrained debugging.
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div class="award-card modern-card">
+            <div class="award-icon-box">🎖️</div>
+            <div class="award-body">
+              <div class="award-head">
+                <h3 class="award-name">Mastercard Code for Change</h3>
+                <span class="badge-tag tag-finalist">National Finalist</span>
+              </div>
+              <p class="award-para">
+                Recognized as a <strong>National Finalist among 2,000+ participants</strong> for designing social-impact financial technology systems and architectural resilience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Achievement 3 -->
+          <div class="award-card modern-card">
+            <div class="award-icon-box">🎓</div>
+            <div class="award-body">
+              <div class="award-head">
+                <h3 class="award-name">Merit Scholarships</h3>
+                <span class="badge-tag tag-scholar">Rs. 75,000 Awarded</span>
+              </div>
+              <p class="award-para">
+                Awarded Rs. 75,000 in recognition of exceptional academic rank, maintaining a cumulative <strong>9.0 / 10.0 CGPA</strong> in Electronics and Telecommunication Engineering at Army Institute of Technology, Pune.
+              </p>
+            </div>
+          </div>
+
+          <!-- Competitive Coding Hub -->
+          <div class="award-card modern-card">
+            <div class="award-icon-box">⚡</div>
+            <div class="award-body">
+              <div class="award-head">
+                <h3 class="award-name">Competitive Programming</h3>
+                <span class="badge-tag tag-coder">Active Coder</span>
+              </div>
+              <p class="award-para">Regular participant in global algorithmic contests:</p>
+              
+              <div class="cp-links-row">
+                <a href="https://codeforces.com/profile/KunalSinghChauhan" target="_blank" rel="noopener noreferrer" class="cp-chip-link">
+                  <span class="cp-chip-label">Codeforces</span>
+                  <span class="cp-chip-val">KunalSinghChauhan ↗</span>
+                </a>
+                <a href="https://www.codechef.com/users/kunalasgreat56" target="_blank" rel="noopener noreferrer" class="cp-chip-link">
+                  <span class="cp-chip-label">CodeChef</span>
+                  <span class="cp-chip-val">kunalasgreat56 ↗</span>
+                </a>
+                <a href="https://www.hackerrank.com/ksingh112113114" target="_blank" rel="noopener noreferrer" class="cp-chip-link">
+                  <span class="cp-chip-label">HackerRank</span>
+                  <span class="cp-chip-val">ksingh112113114 ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education Card -->
+        <div class="education-card-wrapper">
+          <div class="modern-card edu-card">
+            <div class="edu-icon-sq">🎓</div>
+            <div class="edu-content">
+              <div class="edu-institution">Army Institute of Technology (AIT), Pune</div>
+              <h3 class="edu-degree">Bachelor of Engineering (BE) — Electronics &amp; Telecommunication</h3>
+              <div class="edu-dates">
+                <span>August 2022 – May 2026</span> • <strong class="edu-gpa">CGPA: 9.0 / 10.0</strong>
+              </div>
+              <div class="edu-course-list">
+                <span class="course-tag">Data Structures &amp; Algorithms</span>
+                <span class="course-tag">Object-Oriented Programming</span>
+                <span class="course-tag">Computer Networks</span>
+                <span class="course-tag">Database Management</span>
+                <span class="course-tag">Control Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive Terminal & Specs (About Section) -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-center-head">
+          <div class="pill-badge">Terminal</div>
+          <h2 class="section-big-title">
+            Developer Console &amp; <span class="highlight-green">Quick Specs</span>
+          </h2>
+          <p class="section-lead-text text-center">Interact with the CLI to inspect raw profile data and architectural principles.</p>
+        </div>
+
+        <div class="terminal-wrapper">
+          <div class="terminal-card" id="terminal-container">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">kunal@arch-box: ~ (zsh)</div>
+              <div class="terminal-status">online</div>
+            </div>
+            
+            <div class="terminal-quick-actions" id="terminal-quick-actions">
+              <button class="term-btn active" data-cmd="cat profile.json">profile.json</button>
+              <button class="term-btn" data-cmd="kunal --skills">--skills</button>
+              <button class="term-btn" data-cmd="kunal --benchmarks">--benchmarks</button>
+              <button class="term-btn" data-cmd="kunal --contact">--contact</button>
+            </div>
+
+            <div class="terminal-body" id="terminal-screen" tabindex="0">
+              <div class="term-line output-text" id="terminal-output">
+                <pre class="json-code"><code>{
+  <span class="json-key">"name"</span>: <span class="json-string">"Kunal Singh"</span>,
+  <span class="json-key">"role"</span>: <span class="json-string">"Software Developer L2"</span>,
+  <span class="json-key">"location"</span>: <span class="json-string">"Pune, India"</span>,
+  <span class="json-key">"experience_years"</span>: <span class="json-number">2.0</span>,
+  <span class="json-key">"core_languages"</span>: [<span class="json-string">"Python"</span>, <span class="json-string">"C++"</span>, <span class="json-string">"Java"</span>, <span class="json-string">"JavaScript"</span>, <span class="json-string">"Kotlin"</span>],
+  <span class="json-key">"specialties"</span>: [
+    <span class="json-string">"High-Throughput Distributed Backends"</span>,
+    <span class="json-string">"Low-Latency C++ Profiling (gprof, Google Benchmark)"</span>,
+    <span class="json-string">"Local Financial & Tax Automation Tools"</span>,
+    <span class="json-string">"AWS Cloud Infrastructure & Secrets Rotation"</span>
+  ],
+  <span class="json-key">"status"</span>: <span class="json-string">"🚀 Ready to deploy impactful code"</span>
+}</code></pre>
+              </div>
+
+              <!-- Terminal input prompt -->
+              <div class="term-prompt-line">
+                <span class="term-prompt-user">kunal@systems</span>:<span class="term-prompt-path">~</span>$ 
+                <span class="term-prompt-input" id="terminal-active-input">cat profile.json</span>
+                <span class="term-cursor"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section (Modeled after reference image) -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-center-head">
+          <div class="pill-badge">Contact</div>
+          <h2 class="section-big-title">
+            Let's Discuss Your <span class="highlight-green">Next Project</span>
+          </h2>
+          <p class="section-lead-text text-center">
+            Interested in discussing high-throughput backends, low-latency C++ systems, or exciting software engineering opportunities? Reach out directly.
+          </p>
+        </div>
+
+        <div class="contact-box-grid">
+          <!-- Left Column: Contact Direct Info -->
+          <div class="contact-direct-column">
+            
+            <div class="contact-info-item modern-card">
+              <div class="contact-icon-square">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="contact-text-wrap">
+                <span class="contact-lbl">Email Address</span>
+                <a href="mailto:ksingh112113114@gmail.com" class="contact-val">ksingh112113114@gmail.com</a>
+              </div>
+              <button class="copy-icon-btn" onclick="copyToClipboard('ksingh112113114@gmail.com', this)" title="Copy email address">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </button>
+            </div>
+
+            <div class="contact-info-item modern-card">
+              <div class="contact-icon-square">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="contact-text-wrap">
+                <span class="contact-lbl">Location</span>
+                <span class="contact-val">Pune, Maharashtra, India (Open to Remote / Hybrid / Relocation)</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item modern-card">
+              <div class="contact-icon-square">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <div class="contact-text-wrap">
+                <span class="contact-lbl">Availability</span>
+                <span class="contact-val">30 Days Notice Period</span>
+              </div>
+            </div>
+
+            <div class="contact-social-row">
+              <a href="https://github.com/kunal763" target="_blank" rel="noopener noreferrer" class="btn btn-outline-round btn-block">
+                <span>GitHub (@kunal763)</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://linkedin.com/in/kunal-singh-chauhan" target="_blank" rel="noopener noreferrer" class="btn btn-outline-round btn-block">
+                <span>LinkedIn Profile</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Direct Message Form -->
+          <div class="contact-form-card modern-card">
+            <h3 class="form-card-title">Send a Direct Message</h3>
+            <p class="form-card-sub">Fill out this quick form to pre-populate an inquiry directly to my inbox.</p>
+
+            <form id="portfolio-contact-form" onsubmit="handleContactSubmit(event)">
+              <div class="form-row-2">
+                <div class="form-field">
+                  <label for="contact-name" class="field-label">Your Name</label>
+                  <input type="text" id="contact-name" name="name" class="field-input" placeholder="e.g. Alex Morgan" required>
+                </div>
+                <div class="form-field">
+                  <label for="contact-email" class="field-label">Your Email</label>
+                  <input type="email" id="contact-email" name="email" class="field-input" placeholder="alex@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-subject" class="field-label">Subject</label>
+                <input type="text" id="contact-subject" name="subject" class="field-input" placeholder="e.g. Backend Engineer Opportunity / Open Source Collaboration" required>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-message" class="field-label">Message</label>
+                <textarea id="contact-message" name="message" rows="4" class="field-input" placeholder="Hi Kunal, I saw your work on distributed backends and low-latency systems..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-dark-pill btn-block" id="contact-submit-btn">
+                <span>Submit Message 🚀</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">&copy; <span id="current-year">2026</span> Kunal Singh</div>
+        <p class="footer-sub">Software Developer L2 • Backend &amp; Systems Architect</p>
+      </div>
+
+      <div class="footer-center">
+        <ul class="footer-nav">
+          <li><a href="#hero">Top</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social-icons">
+          <a href="https://github.com/kunal763" target="_blank" rel="noopener noreferrer" class="foot-icon-link" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/kunal-singh-chauhan" target="_blank" rel="noopener noreferrer" class="foot-icon-link" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://codeforces.com/profile/KunalSinghChauhan" target="_blank" rel="noopener noreferrer" class="foot-icon-link" title="Codeforces">
+            <span style="font-weight: 800; font-size: 0.8rem; font-family: var(--font-mono);">CF</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Resume Modal -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" style="display: none;">
+    <div class="modal-container modern-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon">📄</span>
+          <h3 class="modal-title" id="resume-modal-title">Kunal Singh — Resume</h3>
+        </div>
+        <div class="modal-actions">
+          <a href="./assets/Kunal_Singh_Resume.pdf" download="Kunal_Singh_Resume.pdf" class="btn btn-sm btn-primary btn-round" id="modal-download-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download PDF</span>
+          </a>
+          <button class="modal-close-btn" onclick="closeResumeModal()" aria-label="Close resume preview">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="resume-preview-frame">
+          <iframe src="./assets/Kunal_Singh_Resume.pdf" title="Kunal Singh Resume PDF" width="100%" height="600px" class="resume-pdf-frame"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Details Deep Dive Modal -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" style="display: none;">
+    <div class="modal-container modern-card">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-icon" id="project-modal-icon">🚀</span>
+          <h3 class="modal-title" id="project-modal-title">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close project details">&times;</button>
+      </div>
+      <div class="modal-body" id="project-modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Custom Javascript -->
+  <script src="script.js"></script>
+</body>
+</html>
